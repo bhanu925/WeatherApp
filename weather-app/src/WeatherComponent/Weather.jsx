@@ -33,23 +33,23 @@ export default function Weather() {
             <button onClick={fetchData}>Search</button>
         </div>
         {loading && <p>Loading data...</p>}
-        {weatherData && <div className="weather">            
-                    <div className="weather-cards">
+        {weatherData && <div className="weather-cards">            
+                    <div className="weather-card">
                         <h3>Temperature</h3>
                         <p>{weatherData.current.temp_c}°C</p>
                     </div>
 
-                    <div className="weather-cards">
+                    <div className="weather-card">
                         <h3>Humidity</h3>
                         <p>{weatherData.current.humidity}%</p>
                     </div>
 
-                    <div className="weather-cards">
+                    <div className="weather-card">
                         <h3>Condition</h3>
                         <p>{weatherData.current.condition.text}</p>
                     </div>
 
-                    <div className="weather-cards">
+                    <div className="weather-card">
                         <h3>Wind Speed</h3>
                         <p>{weatherData.current.wind_kph} kph</p>
                     </div>                 
